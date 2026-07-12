@@ -6,5 +6,5 @@ class Solution:
             if num in dix:
                 return True
             else:
-                dix[num] = []
+                dix[num] = 1
         return False
