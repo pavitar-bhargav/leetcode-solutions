@@ -1,11 +1,10 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        ox = {}
+        dom = {}
         for i in range(len(nums)):
-            diff = target - nums[i]
-            if diff in ox:
-                return [ox[diff] , i]
+            num = nums[i]
+            diff = target - num
+            if diff in dom:
+                return [dom[diff], i]
             else:
-                ox[nums[i]] = i
-           
-            
+                dom[nums[i]] = i
