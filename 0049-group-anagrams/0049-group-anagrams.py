@@ -1,10 +1,9 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        dictionary = {}
+        ox = {}
         for s in strs:
-            tag = ''.join(sorted(s))
-            if tag not in dictionary:
-                dictionary[tag] = []
-            dictionary[tag].append(s)
-        return list(dictionary.values())
-        
+            label = "".join(sorted(s))
+            if label not in ox:
+                ox[label] = []
+            ox[label].append(s)
+        return list(ox.values())
